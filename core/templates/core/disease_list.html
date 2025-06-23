@@ -1,0 +1,594 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Guide - MedHealth</title>
+    <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Disease List Layout */
+        .disease-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Search Section */
+        .search-section {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .search-container:focus-within {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            font-size: 1rem;
+            color: #1e293b;
+            background: transparent;
+        }
+
+        .search-input:focus {
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .search-button {
+            padding: 1rem 2rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .search-button:hover {
+            background: #1e40af;
+            transform: scale(1.02);
+        }
+
+        .search-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Disease Grid */
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .disease-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .disease-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid #dbeafe;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .disease-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .disease-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-tag {
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .severity-mild { background: #dbeafe; color: #1d4ed8; }
+        .severity-moderate { background: #fef3c7; color: #b45309; }
+        .severity-severe { background: #fee2e2; color: #b91c1c; }
+        .chronic-tag { background: #fce7f3; color: #be185d; }
+        .acute-tag { background: #dcfce7; color: #15803d; }
+
+        .details-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .details-link:hover {
+            background: #1e40af;
+            transform: translateX(5px);
+        }
+
+        .details-link:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 4rem 0;
+            color: #64748b;
+            font-size: 1.25rem;
+            font-weight: 500;
+            grid-column: 1 / -1;
+        }
+
+        /* Pagination Styles */
+        .pagination {
+            margin: 3rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .page-item {
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            background: #f0f4f8;
+            color: #1e293b;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .page-item:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .page-item.active {
+            background: #2563eb;
+            color: white;
+            font-weight: 600;
+        }
+
+        .page-item.disabled {
+            background: #e2e8f0;
+            color: #a0aec0;
+            cursor: not-allowed;
+        }
+
+        /* Visually Hidden for Accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .disease-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .card-image {
+                height: 150px;
+            }
+
+            .page-title {
+                font-size: 1.75rem;
+            }
+
+            .disease-name {
+                font-size: 1.1rem;
+            }
+
+            .card-content {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .disease-container {
+                padding: 0 1rem;
+            }
+
+            .search-container {
+                flex-direction: column;
+                box-shadow: none;
+                background: none;
+            }
+
+            .search-input {
+                border: 2px solid #cbd5e1;
+                border-radius: 12px;
+                margin-bottom: 1rem;
+                padding: 0.75rem 1rem;
+            }
+
+            .search-button {
+                width: 100%;
+                border-radius: 8px;
+                padding: 0.75rem;
+            }
+
+            .disease-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Header Styles (from disease_detail.html) */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .logo i {
+            color: #2563eb;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .main-nav a {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #2563eb;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Footer Styles (from disease_detail.html) */
+        .footer {
+            background: #f8fafc;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-about .logo {
+            margin-bottom: 1rem;
+        }
+
+        .footer-about p {
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #64748b;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #2563eb;
+        }
+
+        .footer-links h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #2563eb;
+        }
+
+        .footer-contact p {
+            color: #64748b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-legal a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-legal a:hover {
+            color: #2563eb;
+        }
+
+        .copyright {
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>MedHealth</span>
+            </div>
+            <nav class="main-nav">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'profile' %}">Profile</a>
+                <a href="#">About</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Disease List Section -->
+    <section class="disease-container" aria-labelledby="disease-guide-title">
+        <h2 id="disease-guide-title" class="page-title">Disease Guide</h2>
+
+        <div class="search-section">
+            <form method="get" action="{% url 'disease_list' %}" class="search-form" role="search">
+                <div class="search-container">
+                    <label for="search-disease" class="visually-hidden">Search diseases</label>
+                    <input type="text" 
+                           id="search-disease"
+                           class="search-input" 
+                           name="q" 
+                           placeholder="Search diseases by name..."
+                           value="{{ request.GET.q }}"
+                           aria-describedby="search-help">
+                    <button type="submit" class="search-button" aria-label="Search diseases">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </form>
+            <small id="search-help" class="visually-hidden">Enter a disease name to filter results.</small>
+        </div>
+
+        <div class="disease-grid" role="region" aria-live="polite">
+            {% for disease in diseases %}
+            <article class="disease-card" aria-labelledby="disease-{{ disease.pk }}-name">
+                <div class="card-image" 
+                     style="background-image: url('{% if disease.image %}{{ disease.image.url }}{% elif disease.image_url %}{{ disease.image_url }}{% else %}https://via.placeholder.com/300x200{% endif %}');" 
+                     aria-hidden="true"></div>
+                <div class="card-content">
+                    <h3 id="disease-{{ disease.pk }}-name" class="disease-name">{{ disease.name }}</h3>
+                    <div class="disease-meta">
+                        <span class="status-tag severity-{{ disease.severity_level|lower }}">
+                            {{ disease.severity_level|title }}
+                        </span>
+                        <span class="status-tag {% if disease.is_chronic %}chronic-tag{% else %}acute-tag{% endif %}">
+                            {{ disease.is_chronic|yesno:"Chronic,Acute" }}
+                        </span>
+                    </div>
+                    <a href="{% url 'disease_detail' disease.pk %}" 
+                       class="details-link" 
+                       aria-label="View details for {{ disease.name }}">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% empty %}
+            <div class="no-results">
+                <p>No diseases found matching your query.</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% include 'core/pagination.html' %}
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MedHealth</span>
+                    </div>
+                    <p>Your trusted health companion providing reliable medical information and tools to help you manage your health.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'disease_list' %}">Conditions</a></li>
+                        <li><a href="{% url 'medicine_list' %}">Medications</a></li>
+                        <li><a href="#">Reminders</a></li>
+                        <li><a href="{% url 'profile' %}">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Health Articles</a></li>
+                        <li><a href="#">Medication Guide</a></li>
+                        <li><a href="#">First Aid</a></li>
+                        <li><a href="#">Emergency Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@medcare.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Health St, Medical City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="copyright">
+                    © 2025 MedHealth. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'core/js/home.js' %}"></script>
+</body>
+</html>

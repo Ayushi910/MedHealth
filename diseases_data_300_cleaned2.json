@@ -1,0 +1,1112 @@
+[
+    {
+        "name": "Fungal Infection",
+        "description": "Infections caused by fungi, affecting skin, nails, or internal organs.",
+        "causes": "Exposure to fungi in environment, weakened immune system, prolonged antibiotic use.",
+        "prevention": "Keep skin dry, avoid sharing personal items, maintain hygiene.",
+        "treatment": "Antifungal creams or oral medications, hygiene maintenance.",
+        "severity_level": "Mild to Moderate",
+        "is_chronic": false,
+        "symptoms": [
+            "Itching",
+            "Redness",
+            "Rash",
+            "Scaling",
+            "Discomfort"
+        ],
+        "medicines": [
+            {
+                "name": "Clotrimazole",
+                "form": "Cream",
+                "dosage": "Apply twice daily",
+                "side_effects": "Skin irritation, burning",
+                "allergies_warning": "Avoid if allergic to azoles."
+            },
+            {
+                "name": "Fluconazole",
+                "form": "Tablet",
+                "dosage": "150mg single dose or 50mg daily",
+                "side_effects": "Nausea, headache, liver toxicity (rare)",
+                "allergies_warning": "Avoid if allergic to azoles or with liver disease."
+            },
+            {
+                "name": "Terbinafine",
+                "form": "Tablet",
+                "dosage": "250mg daily",
+                "side_effects": "Nausea, rash, liver issues",
+                "allergies_warning": "Avoid if allergic to allylamines."
+            },
+            {
+                "name": "Miconazole",
+                "form": "Cream",
+                "dosage": "Apply twice daily",
+                "side_effects": "Itching, redness",
+                "allergies_warning": "Avoid if allergic to azoles."
+            },
+            {
+                "name": "Nystatin",
+                "form": "Cream",
+                "dosage": "Apply 2-3 times daily",
+                "side_effects": "Mild irritation, rash",
+                "allergies_warning": "Avoid if allergic to nystatin."
+            }
+        ]
+    },
+    {
+        "name": "Allergy",
+        "description": "Immune system overreaction to substances like pollen, food, or drugs.",
+        "causes": "Exposure to allergens (e.g., pollen, dust mites, foods, pet dander).",
+        "prevention": "Avoid known allergens, use air purifiers, allergy-proof bedding.",
+        "treatment": "Antihistamines, corticosteroids, allergen avoidance.",
+        "severity_level": "Mild to Severe",
+        "is_chronic": true,
+        "symptoms": [
+            "Sneezing",
+            "Itching",
+            "Rash",
+            "Swelling",
+            "Difficulty Breathing"
+        ],
+        "medicines": [
+            {
+                "name": "Cetirizine",
+                "form": "Tablet",
+                "dosage": "10mg daily",
+                "side_effects": "Drowsiness, dry mouth",
+                "allergies_warning": "Avoid if allergic to antihistamines."
+            },
+            {
+                "name": "Loratadine",
+                "form": "Tablet",
+                "dosage": "10mg daily",
+                "side_effects": "Headache, fatigue",
+                "allergies_warning": "Avoid if allergic to antihistamines."
+            },
+            {
+                "name": "Fexofenadine",
+                "form": "Tablet",
+                "dosage": "180mg daily",
+                "side_effects": "Headache, drowsiness",
+                "allergies_warning": "Avoid if allergic to antihistamines."
+            },
+            {
+                "name": "Montelukast",
+                "form": "Tablet",
+                "dosage": "10mg daily",
+                "side_effects": "Headache, abdominal pain",
+                "allergies_warning": "Avoid if allergic to leukotriene inhibitors."
+            },
+            {
+                "name": "Fluticasone",
+                "form": "Nasal Spray",
+                "dosage": "2 sprays per nostril daily",
+                "side_effects": "Nasal irritation, headache",
+                "allergies_warning": "Avoid if allergic to corticosteroids."
+            }
+        ]
+    },
+    {
+        "name": "Heart Attack",
+        "description": "Blockage of blood flow to the heart muscle, causing tissue damage.",
+        "causes": "Coronary artery disease, blood clots, high cholesterol, smoking.",
+        "prevention": "Healthy diet, regular exercise, smoking cessation, manage stress.",
+        "treatment": "Aspirin, clot busters, angioplasty, beta-blockers.",
+        "severity_level": "Severe",
+        "is_chronic": false,
+        "symptoms": [
+            "Chest Pain",
+            "Shortness of Breath",
+            "Sweating",
+            "Nausea",
+            "Arm Pain"
+        ],
+        "medicines": [
+            {
+                "name": "Aspirin",
+                "form": "Tablet",
+                "dosage": "325mg chewed immediately",
+                "side_effects": "Stomach upset, bleeding risk",
+                "allergies_warning": "Avoid if allergic to NSAIDs or with bleeding disorders."
+            },
+            {
+                "name": "Nitroglycerin",
+                "form": "Sublingual Tablet",
+                "dosage": "0.4mg every 5 minutes, up to 3 doses",
+                "side_effects": "Headache, dizziness",
+                "allergies_warning": "Avoid if allergic to nitrates."
+            },
+            {
+                "name": "Clopidogrel",
+                "form": "Tablet",
+                "dosage": "300mg loading dose, then 75mg daily",
+                "side_effects": "Bleeding, bruising",
+                "allergies_warning": "Avoid if allergic to antiplatelets."
+            },
+            {
+                "name": "Metoprolol",
+                "form": "Tablet",
+                "dosage": "25-100mg daily",
+                "side_effects": "Fatigue, dizziness",
+                "allergies_warning": "Avoid if allergic to beta-blockers."
+            },
+            {
+                "name": "Atorvastatin",
+                "form": "Tablet",
+                "dosage": "40mg daily",
+                "side_effects": "Muscle pain, liver issues",
+                "allergies_warning": "Avoid if allergic to statins."
+            }
+        ]
+    },
+    {
+        "name": "Diabetes",
+        "description": "Chronic condition with high blood sugar due to insulin issues.",
+        "causes": "Genetic factors, obesity, sedentary lifestyle, autoimmune reaction.",
+        "prevention": "Healthy diet, regular exercise, weight management.",
+        "treatment": "Insulin, oral hypoglycemics, lifestyle changes.",
+        "severity_level": "Moderate to Severe",
+        "is_chronic": true,
+        "symptoms": [
+            "Increased Thirst",
+            "Frequent Urination",
+            "Fatigue",
+            "Blurred Vision",
+            "Slow Healing"
+        ],
+        "medicines": [
+            {
+                "name": "Metformin",
+                "form": "Tablet",
+                "dosage": "500mg twice daily",
+                "side_effects": "Nausea, diarrhea",
+                "allergies_warning": "Avoid if allergic to metformin or with kidney issues."
+            },
+            {
+                "name": "Insulin Glargine",
+                "form": "Injection",
+                "dosage": "Varies per patient",
+                "side_effects": "Hypoglycemia, weight gain",
+                "allergies_warning": "Avoid if allergic to insulin."
+            },
+            {
+                "name": "Glipizide",
+                "form": "Tablet",
+                "dosage": "5mg daily",
+                "side_effects": "Hypoglycemia, weight gain",
+                "allergies_warning": "Avoid if allergic to sulfonylureas."
+            },
+            {
+                "name": "Sitagliptin",
+                "form": "Tablet",
+                "dosage": "100mg daily",
+                "side_effects": "Headache, sore throat",
+                "allergies_warning": "Avoid if allergic to DPP-4 inhibitors."
+            },
+            {
+                "name": "Dapagliflozin",
+                "form": "Tablet",
+                "dosage": "10mg daily",
+                "side_effects": "Urinary infections, dehydration",
+                "allergies_warning": "Avoid if allergic to SGLT2 inhibitors."
+            }
+        ]
+    },
+    {
+        "name": "Bronchial Asthma",
+        "description": "Chronic respiratory condition with airway inflammation and narrowing.",
+        "causes": "Allergens, exercise, cold air, stress, genetic predisposition.",
+        "prevention": "Avoid triggers, use inhalers, monitor lung function.",
+        "treatment": "Inhaled corticosteroids, bronchodilators, allergy management.",
+        "severity_level": "Moderate",
+        "is_chronic": true,
+        "symptoms": [
+            "Wheezing",
+            "Shortness of Breath",
+            "Chest Tightness",
+            "Coughing"
+        ],
+        "medicines": [
+            {
+                "name": "Salbutamol",
+                "form": "Inhaler",
+                "dosage": "2 puffs every 4-6 hours as needed",
+                "side_effects": "Tremors, palpitations",
+                "allergies_warning": "Avoid if allergic to beta-agonists."
+            },
+            {
+                "name": "Budesonide",
+                "form": "Inhaler",
+                "dosage": "200mcg twice daily",
+                "side_effects": "Throat irritation, hoarseness",
+                "allergies_warning": "Avoid if allergic to corticosteroids."
+            },
+            {
+                "name": "Montelukast",
+                "form": "Tablet",
+                "dosage": "10mg daily",
+                "side_effects": "Headache, abdominal pain",
+                "allergies_warning": "Avoid if allergic to leukotriene inhibitors."
+            },
+            {
+                "name": "Fluticasone",
+                "form": "Inhaler",
+                "dosage": "100mcg twice daily",
+                "side_effects": "Throat irritation, oral thrush",
+                "allergies_warning": "Avoid if allergic to corticosteroids."
+            },
+            {
+                "name": "Ipratropium",
+                "form": "Inhaler",
+                "dosage": "2 puffs four times daily",
+                "side_effects": "Dry mouth, constipation",
+                "allergies_warning": "Avoid if allergic to anticholinergics."
+            }
+        ]
+    },
+    {
+        "name": "Hypertension",
+        "description": "Chronic high blood pressure, straining heart and blood vessels.",
+        "causes": "Genetics, obesity, stress, high salt intake, smoking.",
+        "prevention": "Low-salt diet, exercise, stress management, avoid smoking.",
+        "treatment": "Antihypertensive drugs, lifestyle changes.",
+        "severity_level": "Moderate to Severe",
+        "is_chronic": true,
+        "symptoms": [
+            "Headache",
+            "Dizziness",
+            "Chest Pain",
+            "Shortness of Breath"
+        ],
+        "medicines": [
+            {
+                "name": "Amlodipine",
+                "form": "Tablet",
+                "dosage": "5mg daily",
+                "side_effects": "Swelling, dizziness",
+                "allergies_warning": "Avoid if allergic to calcium channel blockers."
+            },
+            {
+                "name": "Lisinopril",
+                "form": "Tablet",
+                "dosage": "10mg daily",
+                "side_effects": "Cough, dizziness",
+                "allergies_warning": "Avoid if allergic to ACE inhibitors."
+            },
+            {
+                "name": "Losartan",
+                "form": "Tablet",
+                "dosage": "50mg daily",
+                "side_effects": "Dizziness, hyperkalemia",
+                "allergies_warning": "Avoid if allergic to ARBs."
+            },
+            {
+                "name": "Hydrochlorothiazide",
+                "form": "Tablet",
+                "dosage": "25mg daily",
+                "side_effects": "Dehydration, low potassium",
+                "allergies_warning": "Avoid if allergic to thiazides."
+            },
+            {
+                "name": "Atenolol",
+                "form": "Tablet",
+                "dosage": "50mg daily",
+                "side_effects": "Fatigue, bradycardia",
+                "allergies_warning": "Avoid if allergic to beta-blockers."
+            }
+        ]
+    },
+    {
+        "name": "Migraine",
+        "description": "Recurrent headaches with throbbing pain, often with nausea or light sensitivity.",
+        "causes": "Stress, hormonal changes, certain foods, lack of sleep.",
+        "prevention": "Avoid triggers, maintain sleep schedule, stress management.",
+        "treatment": "Pain relievers, triptans, anti-nausea drugs.",
+        "severity_level": "Moderate",
+        "is_chronic": true,
+        "symptoms": [
+            "Throbbing Headache",
+            "Nausea",
+            "Light Sensitivity",
+            "Aura",
+            "Vomiting"
+        ],
+        "medicines": [
+            {
+                "name": "Sumatriptan",
+                "form": "Tablet",
+                "dosage": "50mg at onset",
+                "side_effects": "Dizziness, chest tightness",
+                "allergies_warning": "Avoid if allergic to triptans."
+            },
+            {
+                "name": "Ibuprofen",
+                "form": "Tablet",
+                "dosage": "400mg every 6 hours",
+                "side_effects": "Stomach upset, bleeding risk",
+                "allergies_warning": "Avoid if allergic to NSAIDs."
+            },
+            {
+                "name": "Rizatriptan",
+                "form": "Tablet",
+                "dosage": "10mg at onset",
+                "side_effects": "Drowsiness, dizziness",
+                "allergies_warning": "Avoid if allergic to triptans."
+            },
+            {
+                "name": "Propranolol",
+                "form": "Tablet",
+                "dosage": "40mg twice daily",
+                "side_effects": "Fatigue, bradycardia",
+                "allergies_warning": "Avoid if allergic to beta-blockers."
+            },
+            {
+                "name": "Ondansetron",
+                "form": "Tablet",
+                "dosage": "8mg as needed",
+                "side_effects": "Headache, constipation",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            }
+        ]
+    },
+    {
+        "name": "Jaundice",
+        "description": "Yellowing of skin/eyes due to high bilirubin, often linked to liver issues.",
+        "causes": "Liver disease, bile duct obstruction, hemolysis, hepatitis.",
+        "prevention": "Vaccination for hepatitis, avoid excessive alcohol, safe food/water.",
+        "treatment": "Treat underlying cause, hydration, phototherapy (in newborns).",
+        "severity_level": "Moderate",
+        "is_chronic": false,
+        "symptoms": [
+            "Yellow Skin",
+            "Dark Urine",
+            "Fatigue",
+            "Abdominal Pain",
+            "Itching"
+        ],
+        "medicines": [
+            {
+                "name": "Ursodeoxycholic Acid",
+                "form": "Tablet",
+                "dosage": "300mg twice daily",
+                "side_effects": "Diarrhea, nausea",
+                "allergies_warning": "Avoid if allergic to bile acids."
+            },
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Ondansetron",
+                "form": "Tablet",
+                "dosage": "8mg as needed",
+                "side_effects": "Headache, constipation",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            },
+            {
+                "name": "Vitamin K",
+                "form": "Injection",
+                "dosage": "10mg daily",
+                "side_effects": "Flushing, dizziness",
+                "allergies_warning": "Avoid if allergic to vitamin K."
+            },
+            {
+                "name": "Metoclopramide",
+                "form": "Tablet",
+                "dosage": "10mg as needed",
+                "side_effects": "Drowsiness, restlessness",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            }
+        ]
+    },
+    {
+        "name": "Headache",
+        "description": "Pain in the head, ranging from mild to severe, with various causes.",
+        "causes": "Stress, dehydration, lack of sleep, tension, sinus issues.",
+        "prevention": "Adequate hydration, regular sleep, stress management.",
+        "treatment": "Pain relievers, hydration, rest.",
+        "severity_level": "Mild to Moderate",
+        "is_chronic": false,
+        "symptoms": [
+            "Head Pain",
+            "Sensitivity to Light",
+            "Nausea",
+            "Dizziness"
+        ],
+        "medicines": [
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Ibuprofen",
+                "form": "Tablet",
+                "dosage": "400mg every 6 hours",
+                "side_effects": "Stomach upset, bleeding risk",
+                "allergies_warning": "Avoid if allergic to NSAIDs."
+            },
+            {
+                "name": "Aspirin",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Stomach upset, bleeding risk",
+                "allergies_warning": "Avoid if allergic to NSAIDs."
+            },
+            {
+                "name": "Naproxen",
+                "form": "Tablet",
+                "dosage": "250mg twice daily",
+                "side_effects": "Stomach pain, dizziness",
+                "allergies_warning": "Avoid if allergic to NSAIDs."
+            },
+            {
+                "name": "Caffeine",
+                "form": "Tablet",
+                "dosage": "100mg as needed",
+                "side_effects": "Insomnia, palpitations",
+                "allergies_warning": "Avoid if allergic to caffeine."
+            }
+        ]
+    },
+    {
+        "name": "Hepatitis A",
+        "description": "Viral liver infection causing inflammation, usually self-limiting.",
+        "causes": "Ingestion of contaminated food/water with hepatitis A virus.",
+        "prevention": "Hepatitis A vaccine, safe food/water, hand hygiene.",
+        "treatment": "Supportive care, rest, hydration.",
+        "severity_level": "Mild to Moderate",
+        "is_chronic": false,
+        "symptoms": [
+            "Fatigue",
+            "Nausea",
+            "Jaundice",
+            "Abdominal Pain",
+            "Fever"
+        ],
+        "medicines": [
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Ondansetron",
+                "form": "Tablet",
+                "dosage": "8mg as needed",
+                "side_effects": "Headache, constipation",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            },
+            {
+                "name": "Vitamin B Complex",
+                "form": "Tablet",
+                "dosage": "1 tablet daily",
+                "side_effects": "Mild nausea, flushing",
+                "allergies_warning": "Avoid if allergic to vitamins."
+            },
+            {
+                "name": "Metoclopramide",
+                "form": "Tablet",
+                "dosage": "10mg as needed",
+                "side_effects": "Drowsiness, restlessness",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            },
+            {
+                "name": "Ursodeoxycholic Acid",
+                "form": "Tablet",
+                "dosage": "300mg twice daily",
+                "side_effects": "Diarrhea, nausea",
+                "allergies_warning": "Avoid if allergic to bile acids."
+            }
+        ]
+    },
+    {
+        "name": "Hepatitis B",
+        "description": "Viral liver infection that can become chronic, leading to liver damage.",
+        "causes": "Contact with infected blood/body fluids, unprotected sex, sharing needles.",
+        "prevention": "Hepatitis B vaccine, safe sex, avoid sharing needles.",
+        "treatment": "Antiviral drugs, monitoring, supportive care.",
+        "severity_level": "Moderate to Severe",
+        "is_chronic": true,
+        "symptoms": [
+            "Fatigue",
+            "Jaundice",
+            "Abdominal Pain",
+            "Nausea",
+            "Dark Urine"
+        ],
+        "medicines": [
+            {
+                "name": "Tenofovir",
+                "form": "Tablet",
+                "dosage": "300mg daily",
+                "side_effects": "Nausea, kidney issues",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Entecavir",
+                "form": "Tablet",
+                "dosage": "0.5mg daily",
+                "side_effects": "Headache, fatigue",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Lamivudine",
+                "form": "Tablet",
+                "dosage": "100mg daily",
+                "side_effects": "Nausea, headache",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Ondansetron",
+                "form": "Tablet",
+                "dosage": "8mg as needed",
+                "side_effects": "Headache, constipation",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            }
+        ]
+    },
+    {
+        "name": "Hepatitis C",
+        "description": "Viral liver infection, often chronic, leading to liver damage.",
+        "causes": "Contact with infected blood, sharing needles, blood transfusions (rare).",
+        "prevention": "Avoid sharing needles, safe medical practices, no vaccine available.",
+        "treatment": "Direct-acting antivirals, supportive care.",
+        "severity_level": "Moderate to Severe",
+        "is_chronic": true,
+        "symptoms": [
+            "Fatigue",
+            "Jaundice",
+            "Abdominal Pain",
+            "Nausea",
+            "Joint Pain"
+        ],
+        "medicines": [
+            {
+                "name": "Sofosbuvir",
+                "form": "Tablet",
+                "dosage": "400mg daily",
+                "side_effects": "Fatigue, headache",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Ledipasvir",
+                "form": "Tablet",
+                "dosage": "90mg daily with sofosbuvir",
+                "side_effects": "Fatigue, nausea",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Daclatasvir",
+                "form": "Tablet",
+                "dosage": "60mg daily",
+                "side_effects": "Headache, nausea",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Ribavirin",
+                "form": "Capsule",
+                "dosage": "1000mg daily",
+                "side_effects": "Anemia, fatigue",
+                "allergies_warning": "Avoid if allergic to ribavirin."
+            },
+            {
+                "name": "Velpatasvir",
+                "form": "Tablet",
+                "dosage": "100mg daily with sofosbuvir",
+                "side_effects": "Headache, fatigue",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            }
+        ]
+    },
+    {
+        "name": "Hepatitis D",
+        "description": "Viral liver infection that only occurs with hepatitis B, worsening liver damage.",
+        "causes": "Co-infection with hepatitis B and D via infected blood/body fluids.",
+        "prevention": "Hepatitis B vaccine, avoid sharing needles, safe sex.",
+        "treatment": "Antivirals for hepatitis B, supportive care.",
+        "severity_level": "Severe",
+        "is_chronic": true,
+        "symptoms": [
+            "Fatigue",
+            "Jaundice",
+            "Abdominal Pain",
+            "Nausea",
+            "Dark Urine"
+        ],
+        "medicines": [
+            {
+                "name": "Tenofovir",
+                "form": "Tablet",
+                "dosage": "300mg daily",
+                "side_effects": "Nausea, kidney issues",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Entecavir",
+                "form": "Tablet",
+                "dosage": "0.5mg daily",
+                "side_effects": "Headache, fatigue",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Ondansetron",
+                "form": "Tablet",
+                "dosage": "8mg as needed",
+                "side_effects": "Headache, constipation",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            },
+            {
+                "name": "Ursodeoxycholic Acid",
+                "form": "Tablet",
+                "dosage": "300mg twice daily",
+                "side_effects": "Diarrhea, nausea",
+                "allergies_warning": "Avoid if allergic to bile acids."
+            }
+        ]
+    },
+    {
+        "name": "Hepatitis E",
+        "description": "Viral liver infection, usually self-limiting, spread through contaminated water.",
+        "causes": "Ingestion of contaminated food/water with hepatitis E virus.",
+        "prevention": "Safe drinking water, proper sanitation, hand hygiene.",
+        "treatment": "Supportive care, rest, hydration.",
+        "severity_level": "Mild to Moderate",
+        "is_chronic": false,
+        "symptoms": [
+            "Fatigue",
+            "Jaundice",
+            "Nausea",
+            "Abdominal Pain",
+            "Fever"
+        ],
+        "medicines": [
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Ondansetron",
+                "form": "Tablet",
+                "dosage": "8mg as needed",
+                "side_effects": "Headache, constipation",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            },
+            {
+                "name": "Vitamin B Complex",
+                "form": "Tablet",
+                "dosage": "1 tablet daily",
+                "side_effects": "Mild nausea, flushing",
+                "allergies_warning": "Avoid if allergic to vitamins."
+            },
+            {
+                "name": "Metoclopramide",
+                "form": "Tablet",
+                "dosage": "10mg as needed",
+                "side_effects": "Drowsiness, restlessness",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            },
+            {
+                "name": "Ursodeoxycholic Acid",
+                "form": "Tablet",
+                "dosage": "300mg twice daily",
+                "side_effects": "Diarrhea, nausea",
+                "allergies_warning": "Avoid if allergic to bile acids."
+            }
+        ]
+    },
+    {
+        "name": "Tuberculosis",
+        "description": "Bacterial infection primarily affecting lungs, caused by Mycobacterium tuberculosis.",
+        "causes": "Airborne transmission, prolonged close contact with infected person.",
+        "prevention": "BCG vaccine, ventilation, early treatment of active cases.",
+        "treatment": "Antibiotics (e.g., rifampicin, isoniazid) for 6-9 months.",
+        "severity_level": "Severe",
+        "is_chronic": true,
+        "symptoms": [
+            "Cough",
+            "Fever",
+            "Night Sweats",
+            "Weight Loss",
+            "Chest Pain"
+        ],
+        "medicines": [
+            {
+                "name": "Rifampicin",
+                "form": "Tablet",
+                "dosage": "10mg/kg daily",
+                "side_effects": "Nausea, liver toxicity",
+                "allergies_warning": "Avoid if allergic to rifamycins."
+            },
+            {
+                "name": "Isoniazid",
+                "form": "Tablet",
+                "dosage": "5mg/kg daily",
+                "side_effects": "Nausea, peripheral neuropathy",
+                "allergies_warning": "Avoid if allergic to isoniazid."
+            },
+            {
+                "name": "Ethambutol",
+                "form": "Tablet",
+                "dosage": "15mg/kg daily",
+                "side_effects": "Vision changes, rash",
+                "allergies_warning": "Avoid if allergic to ethambutol."
+            },
+            {
+                "name": "Pyrazinamide",
+                "form": "Tablet",
+                "dosage": "25mg/kg daily",
+                "side_effects": "Joint pain, liver toxicity",
+                "allergies_warning": "Avoid if allergic to pyrazinamide."
+            },
+            {
+                "name": "Levofloxacin",
+                "form": "Tablet",
+                "dosage": "500mg daily",
+                "side_effects": "Tendonitis, diarrhea",
+                "allergies_warning": "Avoid if allergic to fluoroquinolones."
+            }
+        ]
+    },
+    {
+        "name": "Pneumonia",
+        "description": "Infection of the lungs caused by bacteria, viruses, or fungi.",
+        "causes": "Bacterial/viral infection, aspiration, weakened immune system.",
+        "prevention": "Pneumococcal vaccine, flu vaccine, hand hygiene.",
+        "treatment": "Antibiotics, antivirals, oxygen therapy.",
+        "severity_level": "Moderate to Severe",
+        "is_chronic": false,
+        "symptoms": [
+            "Cough",
+            "Fever",
+            "Chest Pain",
+            "Shortness of Breath",
+            "Fatigue"
+        ],
+        "medicines": [
+            {
+                "name": "Amoxicillin",
+                "form": "Tablet",
+                "dosage": "500mg three times daily",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to penicillin."
+            },
+            {
+                "name": "Azithromycin",
+                "form": "Tablet",
+                "dosage": "500mg once, then 250mg daily",
+                "side_effects": "Nausea, diarrhea",
+                "allergies_warning": "Avoid if allergic to macrolides."
+            },
+            {
+                "name": "Levofloxacin",
+                "form": "Tablet",
+                "dosage": "500mg daily",
+                "side_effects": "Tendonitis, diarrhea",
+                "allergies_warning": "Avoid if allergic to fluoroquinolones."
+            },
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Doxycycline",
+                "form": "Tablet",
+                "dosage": "100mg twice daily",
+                "side_effects": "Nausea, photosensitivity",
+                "allergies_warning": "Avoid if allergic to tetracyclines."
+            }
+        ]
+    },
+    {
+        "name": "Kidney Stone",
+        "description": "Hard deposits in kidneys causing severe pain during passage.",
+        "causes": "Dehydration, high oxalate/calcium diet, genetic predisposition.",
+        "prevention": "Adequate hydration, low-sodium diet, avoid oxalate-rich foods.",
+        "treatment": "Pain relievers, increased fluid intake, surgery (if large).",
+        "severity_level": "Moderate",
+        "is_chronic": false,
+        "symptoms": [
+            "Severe Flank Pain",
+            "Blood in Urine",
+            "Nausea",
+            "Frequent Urination",
+            "Fever"
+        ],
+        "medicines": [
+            {
+                "name": "Ibuprofen",
+                "form": "Tablet",
+                "dosage": "400mg every 6 hours",
+                "side_effects": "Stomach upset, bleeding risk",
+                "allergies_warning": "Avoid if allergic to NSAIDs."
+            },
+            {
+                "name": "Tamsulosin",
+                "form": "Capsule",
+                "dosage": "0.4mg daily",
+                "side_effects": "Dizziness, low blood pressure",
+                "allergies_warning": "Avoid if allergic to alpha-blockers."
+            },
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Allopurinol",
+                "form": "Tablet",
+                "dosage": "300mg daily",
+                "side_effects": "Rash, nausea",
+                "allergies_warning": "Avoid if allergic to xanthine oxidase inhibitors."
+            },
+            {
+                "name": "Potassium Citrate",
+                "form": "Tablet",
+                "dosage": "10mEq three times daily",
+                "side_effects": "Stomach upset, diarrhea",
+                "allergies_warning": "Avoid if allergic to citrates."
+            }
+        ]
+    },
+    {
+        "name": "COVID-19",
+        "description": "Viral respiratory illness caused by SARS-CoV-2, ranging from mild to severe.",
+        "causes": "Airborne transmission, close contact with infected person.",
+        "prevention": "Vaccination, masks, social distancing, hand hygiene.",
+        "treatment": "Antivirals, corticosteroids, supportive care.",
+        "severity_level": "Mild to Severe",
+        "is_chronic": false,
+        "symptoms": [
+            "Fever",
+            "Cough",
+            "Shortness of Breath",
+            "Fatigue",
+            "Loss of Taste/Smell"
+        ],
+        "medicines": [
+            {
+                "name": "Remdesivir",
+                "form": "Injection",
+                "dosage": "200mg day 1, then 100mg daily",
+                "side_effects": "Nausea, liver toxicity",
+                "allergies_warning": "Avoid if allergic to remdesivir."
+            },
+            {
+                "name": "Dexamethasone",
+                "form": "Tablet",
+                "dosage": "6mg daily",
+                "side_effects": "Insomnia, increased appetite",
+                "allergies_warning": "Avoid if allergic to corticosteroids."
+            },
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Nirmatrelvir/Ritonavir",
+                "form": "Tablet",
+                "dosage": "300mg/100mg twice daily",
+                "side_effects": "Diarrhea, altered taste",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            },
+            {
+                "name": "Molnupiravir",
+                "form": "Capsule",
+                "dosage": "800mg twice daily",
+                "side_effects": "Nausea, dizziness",
+                "allergies_warning": "Avoid if allergic to antivirals."
+            }
+        ]
+    },
+    {
+        "name": "Tetanus",
+        "description": "Bacterial infection causing muscle spasms, caused by Clostridium tetani.",
+        "causes": "Wound contamination with tetanus spores, unvaccinated status.",
+        "prevention": "Tetanus vaccine, wound cleaning, proper hygiene.",
+        "treatment": "Tetanus immunoglobulin, antibiotics, muscle relaxants.",
+        "severity_level": "Severe",
+        "is_chronic": false,
+        "symptoms": [
+            "Muscle Stiffness",
+            "Lockjaw",
+            "Fever",
+            "Sweating",
+            "Difficulty Swallowing"
+        ],
+        "medicines": [
+            {
+                "name": "Metronidazole",
+                "form": "Tablet",
+                "dosage": "500mg three times daily",
+                "side_effects": "Nausea, metallic taste",
+                "allergies_warning": "Avoid if allergic to nitroimidazoles."
+            },
+            {
+                "name": "Diazepam",
+                "form": "Tablet",
+                "dosage": "5mg as needed",
+                "side_effects": "Drowsiness, dizziness",
+                "allergies_warning": "Avoid if allergic to benzodiazepines."
+            },
+            {
+                "name": "Tetanus Immunoglobulin",
+                "form": "Injection",
+                "dosage": "250-500 units single dose",
+                "side_effects": "Pain at injection site, fever",
+                "allergies_warning": "Avoid if allergic to immunoglobulins."
+            },
+            {
+                "name": "Penicillin G",
+                "form": "Injection",
+                "dosage": "2-4 million units every 4 hours",
+                "side_effects": "Rash, diarrhea",
+                "allergies_warning": "Avoid if allergic to penicillin."
+            },
+            {
+                "name": "Magnesium Sulfate",
+                "form": "Injection",
+                "dosage": "1-2g/hour IV",
+                "side_effects": "Flushing, low blood pressure",
+                "allergies_warning": "Avoid if allergic to magnesium."
+            }
+        ]
+    },
+    {
+        "name": "Liver Infection",
+        "description": "Infection of the liver, often viral, causing inflammation and dysfunction.",
+        "causes": "Viral hepatitis, bacterial infections, contaminated food/water.",
+        "prevention": "Hepatitis vaccines, safe food/water, hygiene.",
+        "treatment": "Antivirals, antibiotics, supportive care.",
+        "severity_level": "Moderate to Severe",
+        "is_chronic": false,
+        "symptoms": [
+            "Jaundice",
+            "Fatigue",
+            "Abdominal Pain",
+            "Nausea",
+            "Fever"
+        ],
+        "medicines": [
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Ceftriaxone",
+                "form": "Injection",
+                "dosage": "1g daily",
+                "side_effects": "Rash, diarrhea",
+                "allergies_warning": "Avoid if allergic to cephalosporins."
+            },
+            {
+                "name": "Ondansetron",
+                "form": "Tablet",
+                "dosage": "8mg as needed",
+                "side_effects": "Headache, constipation",
+                "allergies_warning": "Avoid if allergic to antiemetics."
+            },
+            {
+                "name": "Metronidazole",
+                "form": "Tablet",
+                "dosage": "500mg three times daily",
+                "side_effects": "Nausea, metallic taste",
+                "allergies_warning": "Avoid if allergic to nitroimidazoles."
+            },
+            {
+                "name": "Ursodeoxycholic Acid",
+                "form": "Tablet",
+                "dosage": "300mg twice daily",
+                "side_effects": "Diarrhea, nausea",
+                "allergies_warning": "Avoid if allergic to bile acids."
+            }
+        ]
+    },
+    {
+        "name": "Tonsillitis",
+        "description": "Inflammation of the tonsils, usually due to bacterial or viral infection.",
+        "causes": "Streptococcus bacteria, viruses, close contact with infected person.",
+        "prevention": "Hand hygiene, avoid sharing utensils, good oral hygiene.",
+        "treatment": "Antibiotics (if bacterial), pain relievers, rest.",
+        "severity_level": "Mild to Moderate",
+        "is_chronic": false,
+        "symptoms": [
+            "Sore Throat",
+            "Difficulty Swallowing",
+            "Fever",
+            "Swollen Tonsils",
+            "Bad Breath"
+        ],
+        "medicines": [
+            {
+                "name": "Amoxicillin",
+                "form": "Tablet",
+                "dosage": "500mg three times daily",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to penicillin."
+            },
+            {
+                "name": "Paracetamol",
+                "form": "Tablet",
+                "dosage": "500mg every 6 hours",
+                "side_effects": "Nausea, rash",
+                "allergies_warning": "Avoid if allergic to paracetamol."
+            },
+            {
+                "name": "Azithromycin",
+                "form": "Tablet",
+                "dosage": "500mg once, then 250mg daily",
+                "side_effects": "Nausea, diarrhea",
+                "allergies_warning": "Avoid if allergic to macrolides."
+            },
+            {
+                "name": "Ibuprofen",
+                "form": "Tablet",
+                "dosage": "400mg every 6 hours",
+                "side_effects": "Stomach upset, bleeding risk",
+                "allergies_warning": "Avoid if allergic to NSAIDs."
+            },
+            {
+                "name": "Benzocaine",
+                "form": "Lozenge",
+                "dosage": "10mg every 2 hours as needed",
+                "side_effects": "Mild irritation, numbness",
+                "allergies_warning": "Avoid if allergic to local anesthetics."
+            }
+        ]
+    }
+]

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+   <link rel="stylesheet" href="{% static 'core/css/forget.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Reset Your Password</h1>
+        
+        <!-- Step 1: Email Input -->
+        <div class="step active" id="step1">
+            <div class="form-group">
+                <label for="email">Enter your email address</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <button id="sendOtp">Send OTP</button>
+        </div>
+
+        <!-- Step 2: OTP Verification -->
+        <div class="step" id="step2">
+            <div class="form-group">
+                <label for="otp">Enter the OTP sent to your email</label>
+                <input type="text" id="otp" placeholder="Enter 6-digit OTP" maxlength="6">
+                <div class="resend-container">
+                    <span class="timer" id="timer">Resend OTP in <span id="countdown">30</span> seconds</span>
+                    <a class="resend-link disabled" id="resendLink">Resend OTP</a>
+                </div>
+            </div>
+            <button id="verifyOtp">Verify OTP</button>
+            <div class="message" id="message"></div>
+        </div>
+
+        <!-- Step 3: Success Message -->
+        <div class="step" id="step3">
+            <div class="success message">
+                <p>OTP verified successfully!</p>
+                <p>You can now reset your password.</p>
+            </div>
+            <button id="resetButton">Set New Password</button>
+        </div>
+    </div>
+
+    <script src="core/css/forget.js"></script>
+</body>
+</html>
