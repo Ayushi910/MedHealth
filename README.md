@@ -46,7 +46,22 @@ medhealth/
 ├── manage.py # Django CLI
 └── README.md # Project documentation
 
+## 📸 Screenshots
 
+### 🏠 Home Page  
+![Home Page](screenshots/home.png)
+
+### 👤 Profile Form  
+![Profile Form](screenshots/profile_form.png)
+
+### 🔍 Search Results  
+![Search Results](screenshots/search_results.png)
+
+### 📖 Disease Detail  
+![Disease Detail](screenshots/disease_detail.png)
+
+### 🛠️ Admin Panel  
+![Admin Panel](screenshots/admin_panel.png)
 
 
 ## 🛠️ Installation Guide
@@ -56,18 +71,25 @@ medhealth/
 ```bash
 git clone https://github.com/yourusername/medhealth.git
 cd medhealth
-
+```
+## Create Virtual Environment
 # For Windows
+```bash
 python -m venv venv
 venv\Scripts\activate
-
+```
 # For Mac/Linux
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 #Install Dependencies
+```
 pip install -r requirements.txt
+```
 
 # SQL Setup
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -78,4 +100,11 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+```
+# To Start and Run the Server 
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
 
