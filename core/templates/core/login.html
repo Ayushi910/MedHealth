@@ -214,6 +214,21 @@
   const loginForm = document.getElementById("login-form");
   const errorMessage = document.getElementById("error-message");
 
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = document.getElementById("email").value;
@@ -221,12 +236,27 @@
 
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      console.log("Logged in:", userCredential.user);
-      errorMessage.style.display = "none";
-      alert("Login successful!");
-      // Redirect to dashboard/home page
-      window.location.href = "/home/";
-    } catch (error) {
+        const idToken = await userCredential.user.getIdToken();
+
+        const response = await fetch("/firebase-login/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": getCookie("csrftoken")
+          },
+          body: JSON.stringify({ idToken: idToken })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          errorMessage.style.display = "none";
+          window.location.href = "/profile/";
+        } else {
+          errorMessage.style.display = "block";
+          errorMessage.textContent = "Login failed. Try again.";
+        }
+      }catch (error) {
       console.error("Error logging in:", error);
       
       // Don't display the raw Firebase error message

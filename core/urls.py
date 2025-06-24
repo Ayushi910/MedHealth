@@ -19,6 +19,7 @@ urlpatterns = [
      path('diseases/', DiseaseListView.as_view(), name='disease_list'),
     path('medicines/', MedicineListView.as_view(), name='medicine_list'),
     path('medicine/<int:pk>/', MedicineDetailView.as_view(), name='medicine_detail'),
+    path('firebase-login/', views.firebase_login, name='firebase_login'),
     
     
      

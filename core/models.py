@@ -12,7 +12,7 @@ class UserProfile(models.Model):
         return f"{self.first_name} {self.last_name}"
 
 
-# Symptoms can be associated with diseases (later if needed via ManyToMany)
+# Symptoms can be associated with diseases
 class Symptom(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
@@ -32,7 +32,7 @@ class Disease(models.Model):
     description = models.TextField(blank=True)
     causes = models.TextField(blank=True)
     prevention = models.TextField(blank=True)
-    treatment = models.TextField(blank=True)  # ✅ Added treatment field here
+    treatment = models.TextField(blank=True)  
 
     severity_level = models.CharField(
         max_length=20,

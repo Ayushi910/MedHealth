@@ -7,6 +7,38 @@ from .models import Disease, Medicine, Symptom
 from .models import UserProfile 
 from .forms import UserProfileForm
 from django.views.generic import ListView, DetailView
+import firebase_admin
+from firebase_admin import auth as firebase_auth, credentials
+from django.contrib.auth import login
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.models import User
+
+# Initialize Firebase Admin SDK (once, preferably in AppConfig or settings)
+if not firebase_admin._apps:
+    cred = credentials.Certificate("C:/Users/HP/med/medhealth/firebase-key.json")
+ # Add this file
+    firebase_admin.initialize_app(cred)
+
+@csrf_exempt
+def firebase_login(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            id_token = data.get('idToken')
+            decoded_token = firebase_auth.verify_id_token(id_token)
+            email = decoded_token['email']
+
+            # Get or create Django user
+            user, created = User.objects.get_or_create(username=email, defaults={'email': email})
+            login(request, user)  # Log the user in via Django session
+
+            return JsonResponse({'success': True})
+        except Exception as e:
+            print("Firebase Auth Failed:", e)
+            return JsonResponse({'success': False, 'error': str(e)}, status=401)
+
+    return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 def signup_page(request):
     return render(request, 'core/signup.html')
@@ -16,7 +48,7 @@ def login_page(request):
 
 def profile_view(request):
     if not request.user.is_authenticated:
-        return redirect('/login/')  # or use messages to inform the user
+        return redirect('login')  # Redirect if not logged in
 
     profile = UserProfile.objects.filter(email=request.user.email).first()
 
@@ -31,6 +63,7 @@ def profile_view(request):
         form = UserProfileForm(instance=profile)
 
     return render(request, 'core/profile.html', {'form': form, 'profile': profile})
+
 
 def home(request):
     # Fetch 5 diseases for the home page
