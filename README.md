@@ -55,10 +55,10 @@ medhealth/
 ![Profile Form](Screenshots/Profile_Form.png)
 
 ### 🔍 Search Results  
-![Search Results](Screenshots/Search_Results.png)
+![Search Results](Screenshots/Search_Result.png)
 
 ### 📖 Disease Detail  
-![Disease Detail](Screenshots/Disease_detail.png)
+![Disease Detail](Screenshots/Disease_Detail.png)
 
 ### 🛠️ Admin Panel  
 ![Admin Panel](Screenshots/Admin_Panel.png)
@@ -101,6 +101,12 @@ DATABASES = {
     }
 }
 ```
+## 🔑 Firebase Service Account Setup
+
+1. Ask the admin for the `firebase-key.json` file.
+2. Place it in the project root (same directory as `manage.py`).
+3. Do not rename the file and do NOT commit it to GitHub.
+
 # To Start and Run the Server 
 ```
 python manage.py makemigrations
