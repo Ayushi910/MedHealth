@@ -49,7 +49,7 @@ medhealth/
 ## 📸 Screenshots
 
 ### 🏠 Home Page  
-![Home Page](screenshots/home.png)
+![Home Page](Screenshots/home.png)
 
 ### 👤 Profile Form  
 ![Profile Form](screenshots/profile_form.png)
