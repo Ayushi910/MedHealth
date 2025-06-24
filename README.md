@@ -52,16 +52,16 @@ medhealth/
 ![Home Page](Screenshots/home.png)
 
 ### 👤 Profile Form  
-![Profile Form](screenshots/profile_form.png)
+![Profile Form](Screenshots/Profile_Form.png)
 
 ### 🔍 Search Results  
-![Search Results](screenshots/search_results.png)
+![Search Results](Screenshots/Search_Results.png)
 
 ### 📖 Disease Detail  
-![Disease Detail](screenshots/disease_detail.png)
+![Disease Detail](Screenshots/Disease_detail.png)
 
 ### 🛠️ Admin Panel  
-![Admin Panel](screenshots/admin_panel.png)
+![Admin Panel](Screenshots/Admin_Panel.png)
 
 
 ## 🛠️ Installation Guide
