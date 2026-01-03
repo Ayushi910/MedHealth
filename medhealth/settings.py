@@ -29,7 +29,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2hh%sk=%$7(gjccc_1f_!*9j^sher@id_m%$tcot(sy5l#13lo'
+SECRET_KEY = 'your secret key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'medhealth.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'medhealth_db',
+        'NAME': 'DATABASE_NAME',
         'USER': 'root',
-        'PASSWORD': 'Amanyadav@9933',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'PASSWORD': 'Password',
+        'HOST': 'host',
+        'PORT': 'port',
     }
 }
 
